@@ -39,33 +39,33 @@ Debugging Tools for Windows if you plan on creating a full distribution since sy
 
 The bootstrap script will download all necessary build dependencies and create the build project files. Notice that we’re using ninja to build Electron so there is no Visual Studio project generated.
 
-$ python script\bootstrap.py -v
+`$ python script\bootstrap.py -v`
 
 ## Building Windows
 
 After building is done, you can find electron.exe under out\D (debug target) or under out\R (release target).
 
-$ python script\build.py
+`$ python script\build.py`
 
 ## 32bit Build Windows
 
 To build for the 32bit target, you need to pass --target_arch=ia32 when running the bootstrap script:
 
-$ python script\bootstrap.py -v --target_arch=ia32
+`$ python script\bootstrap.py -v --target_arch=ia32`
 
 ## To generate a Visual Studio project, you can pass the --msvs parameter: Windows
 
-$ python script\bootstrap.py --msvs
+`$ python script\bootstrap.py --msvs`
 
 ## Cleaning
 
-$ npm run clean
+`$ npm run clean`
 
 ## Additional data
-import * as moment from 'moment';
-import _ from "lodash";
-import * as numeral from 'numeral';
-import * as d3 from 'd3';
+`import * as moment from 'moment';`
+`import _ from "lodash";`
+`import * as numeral from 'numeral';`
+`import * as d3 from 'd3';`
 
 
 
