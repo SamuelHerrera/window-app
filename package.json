@@ -9,11 +9,38 @@
     "start": "ng serve",
     "build": "ng build & npm run electron",
     "electron": "electron .",
-    "package": "ng build & electron-packager . --overwrite --platform=win32 --arch=ia32  --asar --out=release-builds",
+    "package": "build",
     "play": "npm-run-all --parallel electron start",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "postinstall": "install-app-deps",
+    "pack": "build --dir"
+  },
+  "build": {
+    "appId": "window-app",
+    "dmg": {
+      "contents": [{
+          "x": 110,
+          "y": 150
+        },
+        {
+          "x": 240,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ]
+    },
+    "win": {
+      "target": "NSIS"
+    }
   },
   "private": true,
   "dependencies": {
@@ -51,6 +78,7 @@
     "@types/node": "~6.0.60",
     "codelyzer": "~3.0.1",
     "electron": "^1.7.9",
+    "electron-builder": "^19.37.2",
     "electron-packager": "^9.1.0",
     "jasmine-core": "~2.6.2",
     "jasmine-spec-reporter": "~4.1.0",
