@@ -6,12 +6,6 @@ const {
 const path = require('path');
 const url = require('url');
 
-require('dotenv').config();
-
-require('electron-reload')(__dirname, {
-  electron: require('${__dirname}/../../node_modules/electron')
-});
-
 let win = null;
 
 app.on('ready', function () {
@@ -25,10 +19,7 @@ app.on('ready', function () {
     }
   });
 
-  // Specify entry point
-  win.loadURL(process.env.HOST);
-
-  win.webContents.openDevTools();
+  win.loadURL('file://' + __dirname + '/index.html');
 
   // Remove window once app is closed
   win.on('closed', function () {

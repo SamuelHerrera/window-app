@@ -7,21 +7,23 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build & npm run electron",
+    "build-and-run": "npm run build & electron dist",
+    "build": "ng build --env=prod --base-href . && copy src\\package.json dist && copy src\\main.js dist",
     "electron": "electron .",
-    "package": "build",
+    "package": "npm run build & build",
     "play": "npm-run-all --parallel electron start",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "postinstall": "install-app-deps",
-    "pack": "build --dir"
+    "e2e": "ng e2e"
   },
   "build": {
     "appId": "window-app",
+    "directories": {
+      "app": "./dist/",
+      "output": "release-builds"
+    },
     "dmg": {
-      "contents": [
-        {
+      "contents": [{
           "x": 110,
           "y": 150
         },
