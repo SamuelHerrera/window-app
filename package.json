@@ -20,7 +20,8 @@
   "build": {
     "appId": "window-app",
     "dmg": {
-      "contents": [{
+      "contents": [
+        {
           "x": 110,
           "y": 150
         },
