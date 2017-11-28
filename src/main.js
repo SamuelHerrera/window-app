@@ -1,26 +1,22 @@
-// ./main.js
 const {app, BrowserWindow } = require('electron')
 const path = require('path');
 const url = require('url');
-const express = require('express');
 const bodyParser = require('body-parser');
-const http = require('http');
-const apiserver = express();
+const apiserver = require('express')();
 const api = require('./api');
+const http = require('http').Server(apiserver);
+const io = require('socket.io')(http);
 
-var appTCP = express();
-var serverTCP = require('http').createServer(appTCP);
-var io = require('../..')(serverTCP);
-var portTCP = '3001';
 
-//java TCP side-----------------------------------------------------------------------------
+//server side-------------------------------------------------------------------------------
 
-serverTCP.listen(portTCP, function () {
-  console.log('Server listening at port %d', port);
-});
+apiserver.use(bodyParser.json());
 
-// Routing
-appTCP.use(express.static(path.join(__dirname, 'dist')));
+apiserver.use(bodyParser.urlencoded({ extended: false}));
+
+apiserver.use(require('express').static(path.join(__dirname, 'dist')));
+
+apiserver.use('/api', api);
 
 io.on('connection', function (socket) {
   socket.on('message', function (data) {
@@ -28,29 +24,7 @@ io.on('connection', function (socket) {
   });
 });
 
-//server side-------------------------------------------------------------------------------
-// Parsers
-apiserver.use(bodyParser.json());
-apiserver.use(bodyParser.urlencoded({ extended: false}));
-
-// Angular DIST output folder
-apiserver.use(express.static(path.join(__dirname, 'dist')));
-
-// API location
-apiserver.use('/api', api);
-
-// Send all other requests to the Angular app
-apiserver.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'dist/index.html'));
-});
-
-//Set Port
-const port = '3000';
-apiserver.set('port', port);
-
-const server = http.createServer(apiserver);
-
-server.listen(port, () => console.log(`Running on localhost:${port}`));
+http.listen('3000', () => console.log(`Running on localhost:${port}`));
 
 //electron side-------------------------------------------------------------------------------
 

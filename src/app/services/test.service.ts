@@ -10,7 +10,7 @@ export class TestService {
 
   private  timeout = 60000;
   private urlAPI = 'http://localhost:3000/api';
-  private urlTCP = 'http://localhost:3001';
+  private urlTCP = 'http://localhost:3000';
   private socket;
 
   constructor(private http: Http) { }

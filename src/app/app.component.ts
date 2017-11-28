@@ -14,13 +14,13 @@ export class AppComponent implements OnInit, OnDestroy {
 
   constructor(private testService:TestService) {}
 
-  testAPI() {
+  public testAPI() {
     this.testService.testGet('testestestes').subscribe(response => {
       console.log(response);
     });
   }
 
-  testTCP() {
+  public testTCP() {
     this.testService.testSendTCP({data:'some tests'});
   }
 

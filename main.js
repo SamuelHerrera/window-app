@@ -1,14 +1,10 @@
-// ./main.js
-const {
-  app,
-  BrowserWindow
-} = require('electron')
+const {app, BrowserWindow } = require('electron')
 const path = require('path');
 const url = require('url');
-const express = require('express');
 const bodyParser = require('body-parser');
-const http = require('http');
-const apiserver = express();
+const apiserver = require('express')();
+const http = require('http').Server(apiserver);
+const io = require('socket.io')(http);
 const api = require('./src/api');
 
 require('dotenv').config();
@@ -17,28 +13,22 @@ require('electron-reload')(__dirname, {
 });
 
 //server side-------------------------------------------------------------------------------
-// Parsers
+
 apiserver.use(bodyParser.json());
+
 apiserver.use(bodyParser.urlencoded({ extended: false}));
 
-// Angular DIST output folder
-apiserver.use(express.static(path.join(__dirname, 'dist')));
+apiserver.use(require('express').static(path.join(__dirname, 'dist')));
 
-// API location
 apiserver.use('/api', api);
 
-// Send all other requests to the Angular app
-apiserver.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'dist/index.html'));
+io.on('connection', function (socket) {
+  socket.on('message', function (data) {
+    socket.broadcast.emit('message', data);
+  });
 });
 
-//Set Port
-const port = process.env.PORT || '3000';
-apiserver.set('port', port);
-
-const server = http.createServer(apiserver);
-
-server.listen(port, () => console.log(`Running on localhost:${port}`));
+http.listen('3000', () => console.log(`Running on localhost:3000`));
 
 //electron side-------------------------------------------------------------------------------
 
