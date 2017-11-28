@@ -8,8 +8,9 @@
     "ng": "ng",
     "start": "ng serve",
     "build-and-run": "npm run build & electron dist",
-    "build": "ng build --env=prod --base-href . && copy src\\package.json dist && copy src\\main.js dist",
+    "build": "ng build --env=prod --base-href . && copy src\\package.json dist && copy src\\main.js dist && copy src\\main.js dist",
     "electron": "electron .",
+    "api": "node server",
     "package": "npm run build & build",
     "play": "npm-run-all --parallel electron start",
     "test": "ng test",
@@ -23,7 +24,8 @@
       "output": "release-builds"
     },
     "dmg": {
-      "contents": [{
+      "contents": [
+        {
           "x": 110,
           "y": 150
         },
@@ -59,9 +61,11 @@
     "@ng-bootstrap/ng-bootstrap": "^1.0.0-beta.5",
     "@types/d3": "^4.11.0",
     "@types/lodash": "^4.14.78",
+    "body-parser": "^1.18.2",
     "core-js": "^2.4.1",
     "d3": "^4.11.0",
     "dotenv": "^4.0.0",
+    "express": "^4.16.2",
     "font-awesome": "^4.7.0",
     "lodash": "^4.17.4",
     "moment": "^2.19.1",
@@ -76,7 +80,7 @@
     "@angular/language-service": "^4.0.0",
     "@types/jasmine": "~2.5.53",
     "@types/jasminewd2": "~2.0.2",
-    "@types/node": "~6.0.60",
+    "@types/node": "^6.0.92",
     "codelyzer": "~3.0.1",
     "electron": "^1.7.9",
     "electron-builder": "^19.37.2",
