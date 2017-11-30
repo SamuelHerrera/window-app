@@ -13,7 +13,9 @@ export class TestService {
   private urlTCP = 'http://localhost:3000';
   private socket;
 
-  constructor(private http: Http) { }
+  constructor(private http: Http) {
+    
+  }
 
   public testGet(data: any): Observable<any> {
     return this.http.get(this.urlAPI+'/users').timeout(this.timeout);
