@@ -1,0 +1,69 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+    padding: 5px;
+}
+
+.user {
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.footer-line{
+    border-bottom: solid 1px #546E7A;
+}
+
+.user-data{
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+    width: calc(100% - 150px);
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 50%;
+    height: 100%;
+}
+
+.fecha-corte{
+    background: orange;
+}
+
+.property{
+    min-width: 200px;
+    display: flex;
+    flex-direction: row;
+}
+
+.property div:nth-of-type(1){
+    width: 100px;
+}
+
+.textarea{
+    resize: vertical;
+    height: 50px;
+}
+
+.start{
+    justify-content: flex-start;
+}
+
+.acciones{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.acciones i{
+    margin-right: 4px;
+}

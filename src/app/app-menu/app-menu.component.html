@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="item" (click)="apps.registrar=!apps.registrar">
+    <i class="fa" [ngClass]="{'fa-toggle-off': !apps.registrar, 'fa-toggle-on': apps.registrar}" aria-hidden="true"></i>
+    <span>Registrar usuario</span>
+  </div>
+  <div class="item" (click)="apps.editar=!apps.editar">
+    <i class="fa" [ngClass]="{'fa-toggle-off': !apps.editar, 'fa-toggle-on': apps.editar}" aria-hidden="true"></i>
+    <span>Editar usuario</span>
+  </div>
+  <div class="item" (click)="apps.entradas=!apps.entradas">
+    <i class="fa" [ngClass]="{'fa-toggle-off': !apps.entradas, 'fa-toggle-on': apps.entradas}" aria-hidden="true"></i>
+    <span>Registros de entrada</span>
+  </div>
+  <div class="item" (click)="apps.pagar=!apps.pagar">
+    <i class="fa" [ngClass]="{'fa-toggle-off': !apps.pagar, 'fa-toggle-on': apps.pagar}" aria-hidden="true"></i>
+    <span>Pagar servicio</span>
+  </div>
+  <div class="item" (click)="apps.historial=!apps.historial">
+    <i class="fa" [ngClass]="{'fa-toggle-off': !apps.historial, 'fa-toggle-on': apps.historial}" aria-hidden="true"></i>
+    <span>Historial de pago</span>
+  </div>
+  <div class="item" (click)="apps.ajustes=!apps.ajustes">
+    <i class="fa" [ngClass]="{'fa-toggle-off': !apps.ajustes, 'fa-toggle-on': apps.ajustes}" aria-hidden="true"></i>
+    <span>Ajustes</span>
+  </div>
+</div>

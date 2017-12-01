@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ActiveUserComponent implements OnInit {
 
+  public userImage= 'assets/images/default-user.png';
+
   constructor() { }
 
   ngOnInit() {

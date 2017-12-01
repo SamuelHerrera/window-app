@@ -1,15 +1,14 @@
 <app-active-user></app-active-user>
+<app-app-menu [AppsArray]="appArray"></app-app-menu>
 <div class='wrapper'>
     <div class='container' [dragula]='"first-bag"'>
-        <app-add-user class="card card-1"></app-add-user>
-        <app-edit-user class="card card-1"></app-edit-user>
-        <app-payment-form class="card card-1"></app-payment-form>
-        <app-payment-history class="card card-1"></app-payment-history>
-        <app-settings class="card card-1"></app-settings>
-        <app-ticket-list class="card card-1"></app-ticket-list>
+        <app-add-user *ngIf="appArray['registrar']" class="card card-1"></app-add-user>
+        <app-edit-user *ngIf="appArray['editar']" class="card card-1"></app-edit-user>
+        <app-payment-form *ngIf="appArray['pagar']" class="card card-1"></app-payment-form>
+        <app-payment-history *ngIf="appArray['historial']" class="card card-1"></app-payment-history>
+        <app-settings *ngIf="appArray['ajustes']" class="card card-1"></app-settings>
+        <app-ticket-list *ngIf="appArray['entradas']" class="card card-1"></app-ticket-list>
     </div>
     <div class='container' [dragula]='"first-bag"'>
     </div>
 </div>
-<button (click)="testAPI()">TEST API</button>
-<button (click)="testTCP()">TEST TCP</button>

@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { DragulaModule } from 'ng2-dragula';
+import { DragulaModule, DragulaService } from 'ng2-dragula';
 import { Ng2TableModule } from 'ng2-table/ng2-table';
 
 import { AppComponent } from './app.component';
@@ -15,6 +15,7 @@ import { AddUserComponent } from './add-user/add-user.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
 import { PaymentFormComponent } from './payment-form/payment-form.component';
 import { PaymentHistoryComponent } from './payment-history/payment-history.component';
+import { AppMenuComponent } from './app-menu/app-menu.component';
 
 @NgModule({
   declarations: [
@@ -25,17 +26,18 @@ import { PaymentHistoryComponent } from './payment-history/payment-history.compo
     AddUserComponent,
     EditUserComponent,
     PaymentFormComponent,
-    PaymentHistoryComponent
+    PaymentHistoryComponent,
+    AppMenuComponent
   ],
   imports: [
-    BrowserModule, 
+    BrowserModule,
     HttpModule,
     FormsModule,
     CommonModule,
     DragulaModule,
     Ng2TableModule
   ],
-  providers: [TestService],
+  providers: [TestService, DragulaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
