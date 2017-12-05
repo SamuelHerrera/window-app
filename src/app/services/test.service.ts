@@ -8,34 +8,36 @@ import * as io from 'socket.io-client';
 @Injectable()
 export class TestService {
 
-  private  timeout = 60000;
+  private timeout = 60000;
   private urlAPI = 'http://localhost:3000/api';
   private urlTCP = 'http://localhost:3000';
   private socket;
 
-  constructor(private http: Http) {
-    
+  constructor(private http: Http) { }
+
+  public registerUser(data: any): Observable<any> {
+    return this.http.post(this.urlAPI + '/users/register', data).timeout(this.timeout);
   }
 
   public testGet(data: any): Observable<any> {
-    return this.http.get(this.urlAPI+'/users').timeout(this.timeout);
+    return this.http.get(this.urlAPI + '/users').timeout(this.timeout);
   }
 
   public testSendTCP(message) {
-    this.socket.emit('message', message);    
+    this.socket.emit('message', message);
   }
-  
+
   testReadTCP() {
     const observable = new Observable(observer => {
       this.socket = io(this.urlTCP);
       this.socket.on('message', (data) => {
-        observer.next(data);    
+        observer.next(data);
       });
       return () => {
         this.socket.disconnect();
-      };  
+      };
     });
     return observable;
-  } 
+  }
 
 }

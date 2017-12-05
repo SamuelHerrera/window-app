@@ -1,0 +1,36 @@
+C:\Program Files\DigitalPersona\One Touch SDK\.NET\Samples\Visual Studio 2005\CSharp\Enrollment\bin\Debug\EnrollmentSample CS.exe
+C:\Program Files\DigitalPersona\One Touch SDK\.NET\Samples\Visual Studio 2005\CSharp\Enrollment\bin\Debug\EnrollmentSample CS.pdb
+C:\Program Files\DigitalPersona\One Touch SDK\.NET\Samples\Visual Studio 2005\CSharp\Enrollment\obj\Debug\EnrollmentSample CS.csprojResolveAssemblyReference.cache
+C:\Program Files\DigitalPersona\One Touch SDK\.NET\Samples\Visual Studio 2005\CSharp\Enrollment\obj\Debug\Enrollment.CaptureForm.resources
+C:\Program Files\DigitalPersona\One Touch SDK\.NET\Samples\Visual Studio 2005\CSharp\Enrollment\obj\Debug\Enrollment.MainForm.resources
+C:\Program Files\DigitalPersona\One Touch SDK\.NET\Samples\Visual Studio 2005\CSharp\Enrollment\obj\Debug\Enrollment.Properties.Resources.resources
+C:\Program Files\DigitalPersona\One Touch SDK\.NET\Samples\Visual Studio 2005\CSharp\Enrollment\obj\Debug\EnrollmentSample CS.csproj.GenerateResource.Cache
+C:\Program Files\DigitalPersona\One Touch SDK\.NET\Samples\Visual Studio 2005\CSharp\Enrollment\obj\Debug\EnrollmentSample CS.exe
+C:\Program Files\DigitalPersona\One Touch SDK\.NET\Samples\Visual Studio 2005\CSharp\Enrollment\obj\Debug\EnrollmentSample CS.pdb
+C:\Program Files\DigitalPersona\One Touch SDK\.NET\Samples\Visual Studio 2005\CSharp\Enrollment\bin\Debug\EnrollmentSample CS.exe.config
+C:\Program Files\DigitalPersona\One Touch SDK\.NET\Samples\Visual Studio 2005\CSharp\Enrollment\bin\Debug\EngineIoClientDotNet.dll
+C:\Program Files\DigitalPersona\One Touch SDK\.NET\Samples\Visual Studio 2005\CSharp\Enrollment\bin\Debug\Newtonsoft.Json.dll
+C:\Program Files\DigitalPersona\One Touch SDK\.NET\Samples\Visual Studio 2005\CSharp\Enrollment\bin\Debug\SocketIoClientDotNet.dll
+C:\Program Files\DigitalPersona\One Touch SDK\.NET\Samples\Visual Studio 2005\CSharp\Enrollment\bin\Debug\SuperSocket.ClientEngine.dll
+C:\Program Files\DigitalPersona\One Touch SDK\.NET\Samples\Visual Studio 2005\CSharp\Enrollment\bin\Debug\System.Threading.Tasks.NET35.dll
+C:\Program Files\DigitalPersona\One Touch SDK\.NET\Samples\Visual Studio 2005\CSharp\Enrollment\bin\Debug\WebSocket4Net.dll
+C:\Program Files\DigitalPersona\One Touch SDK\.NET\Samples\Visual Studio 2005\CSharp\Enrollment\bin\Debug\Newtonsoft.Json.xml
+C:\Program Files\DigitalPersona\One Touch SDK\.NET\Samples\Visual Studio 2005\CSharp\Enrollment\bin\Debug\System.Threading.Tasks.NET35.pdb
+C:\Users\Samanuel Herrera\window-app\C#_client_fp\Enrollment\bin\Debug\EnrollmentSample CS.exe.config
+C:\Users\Samanuel Herrera\window-app\C#_client_fp\Enrollment\bin\Debug\EnrollmentSample CS.exe
+C:\Users\Samanuel Herrera\window-app\C#_client_fp\Enrollment\bin\Debug\EnrollmentSample CS.pdb
+C:\Users\Samanuel Herrera\window-app\C#_client_fp\Enrollment\bin\Debug\EngineIoClientDotNet.dll
+C:\Users\Samanuel Herrera\window-app\C#_client_fp\Enrollment\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Samanuel Herrera\window-app\C#_client_fp\Enrollment\bin\Debug\SocketIoClientDotNet.dll
+C:\Users\Samanuel Herrera\window-app\C#_client_fp\Enrollment\bin\Debug\SuperSocket.ClientEngine.dll
+C:\Users\Samanuel Herrera\window-app\C#_client_fp\Enrollment\bin\Debug\System.Threading.Tasks.NET35.dll
+C:\Users\Samanuel Herrera\window-app\C#_client_fp\Enrollment\bin\Debug\WebSocket4Net.dll
+C:\Users\Samanuel Herrera\window-app\C#_client_fp\Enrollment\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Samanuel Herrera\window-app\C#_client_fp\Enrollment\bin\Debug\System.Threading.Tasks.NET35.pdb
+C:\Users\Samanuel Herrera\window-app\C#_client_fp\Enrollment\obj\Debug\EnrollmentSample CS.csprojResolveAssemblyReference.cache
+C:\Users\Samanuel Herrera\window-app\C#_client_fp\Enrollment\obj\Debug\Enrollment.CaptureForm.resources
+C:\Users\Samanuel Herrera\window-app\C#_client_fp\Enrollment\obj\Debug\Enrollment.MainForm.resources
+C:\Users\Samanuel Herrera\window-app\C#_client_fp\Enrollment\obj\Debug\Enrollment.Properties.Resources.resources
+C:\Users\Samanuel Herrera\window-app\C#_client_fp\Enrollment\obj\Debug\EnrollmentSample CS.csproj.GenerateResource.Cache
+C:\Users\Samanuel Herrera\window-app\C#_client_fp\Enrollment\obj\Debug\EnrollmentSample CS.exe
+C:\Users\Samanuel Herrera\window-app\C#_client_fp\Enrollment\obj\Debug\EnrollmentSample CS.pdb

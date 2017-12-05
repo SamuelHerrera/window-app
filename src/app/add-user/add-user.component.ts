@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TestService } from '../services/test.service';
 
 @Component({
   selector: 'app-add-user',
@@ -7,9 +8,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddUserComponent implements OnInit {
 
-  constructor() { }
+  model: any = {};
+  loading = false;
+
+  constructor(private service: TestService) { }
 
   ngOnInit() {
+  }
+
+  register() {
+    this.loading = true;
+    this.service.registerUser(this.model)
+      .subscribe(
+      data => {
+        this.loading = false;
+      },
+      error => {
+        this.loading = false;
+      });
+  }
+
+  clear() {
+    
   }
 
 }

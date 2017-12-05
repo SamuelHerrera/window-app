@@ -20,7 +20,7 @@ let response = {
 };
 
 // Get users
-router.get('/users', (req, res) => {
+router.post('/users/register', (req, res) => {
     session.run(
         'CREATE (a:Person {name: $name}) RETURN a',
         {name: 'test2'}
